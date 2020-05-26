@@ -1,0 +1,62 @@
+@import "../fonts/fonts.css";
+.accordion {
+    max-width: 754px;
+    margin: 0 auto;
+}
+
+.accordion__item {
+    border-radius: 5px;
+    margin-bottom: 16px;
+    background: #eaeffc;
+    border: 1px solid transparent;
+    transition: .3s ease;
+}
+
+.accordion__item-heading {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    font-family: Open Sans,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5rem;
+    cursor: pointer;
+    padding: 26px 64px 26px 24px;
+    position: relative;
+}
+
+.accordion__item-heading:before {
+    content: "\f107";
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 1.5rem;
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    line-height: 1;
+    color: #3949e7;
+    transition: .3s ease;
+}
+
+.accordion__body {
+    line-height: 1.5;
+    padding: 0 24px 0;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.accordion__item.active,
+.accordion__item:hover {
+    border: 1px solid #eaeffc;
+    background: #fff;
+}
+
+.accordion__item.active {
+    padding-bottom: 24px;
+}
+
+.accordion .active:before {
+    transform: rotate(180deg);
+    color: #f21f5b;
+}
